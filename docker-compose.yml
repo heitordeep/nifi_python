@@ -9,5 +9,5 @@ services:
       # Request with Python
       - "5000:5000"
     volumes:
-      - /opt/nifi:/opt/nifi/nifi-current/treinamento_nifi
+      - /opt/nifi/output:/opt/nifi/nifi-current/treinamento_nifi
 

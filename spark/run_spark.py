@@ -9,9 +9,8 @@ if __name__ == "__main__":
     spark = (
         SparkSession.builder.master('local')
         .appName('generator_data_flow')
-        .config("spark.executor.memory", '1gb')
         .getOrCreate()
     )
 
-    get_data_flow.main(spark)
+    get_data_flow.create_parquet(spark)
     get_data_flow.read_data(spark)
