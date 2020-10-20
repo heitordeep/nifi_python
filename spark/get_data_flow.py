@@ -9,4 +9,4 @@ def create_parquet(spark):
 
 def read_data(spark):
     df = spark.read.parquet('/opt/nifi/trusted')
-    df.show()
+    df.orderBy(df['day']).show(truncate=False)
